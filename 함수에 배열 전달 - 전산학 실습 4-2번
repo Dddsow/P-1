@@ -1,0 +1,39 @@
+input(data[],int size)
+{
+  int cnt_i;
+  printf("%d개의 정수를 입력하세요.:\n);
+  
+  for(cnt_i=0;cnt_i<size;cnt_i++){
+    scanf_s("%d\n",data[cnt_i]);
+  }
+}
+
+findMax(int data[],int size){
+  int cnt_i;
+  int max=0;
+  int max = data[0];
+  for(cnt_i=0;cnt_i<size;cnt_i++){
+    if(data[cnt_i] > max){
+      max=data[cnt_i];
+    }
+  }
+  return max;
+}
+
+
+
+
+
+int main(){
+  
+  int data[10] = { 0,};
+  int cnt_i;
+  int max;
+  
+  input(data,sizeof(data)/sizeof(int));
+  max=findMax(data,sizeof(data)/sizeof(int));
+  printf("max : %d\n\n ", max);
+  
+  getchar();
+  return 0;
+}
