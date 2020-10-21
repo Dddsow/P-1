@@ -1,0 +1,41 @@
+#include<stdio.h>
+
+input(int data[],int size){
+  int cnt_i;
+  printf("%d개의 정수를 입력하세요: \n,size);
+  for(cnt_i=0;cnt_i<size;cnt_i++){
+    scanf_s("%d \n",data[cnt_i]);
+  }
+}
+
+findSecond(int data[],int size){
+  int cnt_i;
+  int max=data[0];
+  int second;
+  
+  for(cnt_i=0;cnt_i<size<cnt_i++){
+    if(max<data[cnt_i]){
+      max=data[cnt_i];
+    }
+  }
+  
+  for(cnt_i=0;cnt_i<size;cnt_++){
+    if(data[cnt_i]<max){
+      second=data[cnt_i];
+    } 
+  }
+  
+  for(cnt_i=0;cnt_i<size;cnt_i++){
+    if((data[cnt_i] < max)&&(data[cnt_i] >second)){
+      second = data[cnt_i];
+    }
+  }
+} 
+
+
+int main(){
+
+
+  getchar();
+  return 0;
+}
