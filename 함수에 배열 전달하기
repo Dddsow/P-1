@@ -1,0 +1,27 @@
+#include<stdio.h>
+
+int main(){
+
+  getchar();
+  return 0;
+}
+
+//크기가 5인경우에 사용가능
+int getTotal(int data[]){
+  int cnt_i;
+  int total=0;
+  for(cnt_i=0;cnt_i< 5; cnt_i++){
+    total += data[cnt_i};
+  }
+  return total;
+}
+
+//크기가 가변인 경우에도 사용 가능 
+int getTotal(int data[],int size){
+  int cnt_i;
+  int total=0;
+  for(cnt_i=0;cnt_i< size; cnt_i++){
+    total += data[cnt_i};
+  }
+  return total;
+}
