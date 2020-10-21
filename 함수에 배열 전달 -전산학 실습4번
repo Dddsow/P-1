@@ -1,0 +1,41 @@
+#include<Stdio.h>
+
+
+input(int data[],int size)
+{
+  int cnt_i;
+  printf("%d개의 정수를 입력하세요\n",size);
+  
+  for(cnt_i=0;cnt_i<size;cnt_i++){
+    scanf_s("%d",&data[cnt_i]);
+  }
+  
+}
+
+getAverage(int data[],int size)
+{
+ int cnt_i;
+ int total = 0;
+ double average=0.0;
+ 
+ for(cnt_i=0;cnt_i<size;cnt_i++){
+    total += data[cnt_i];
+ }
+  average=total/(double)size;
+  
+  return average;
+}
+int main(){
+  
+  int data[10] ={ 0. };
+  int cnt_ i;
+  double avg;
+  
+  
+  input(data,sizeof(data)/sizeof(int));
+  avg=getAverage(data,sizeof(data)/sizeof(int));
+  printf("average:%lf\n\n",avg);
+  
+  getchar();
+  return 0;
+}
